@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker | Build Better Habits</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-chart-line"></i> Habit Tracker</h1>
+            <p class="subtitle">Track your daily habits and build consistency</p>
+        </header>
+
+        <!-- Add Habit Section -->
+        <div class="add-habit-section">
+            <div class="input-group">
+                <input type="text" id="habitInput"
+                    placeholder="Enter a new habit (e.g., Exercise, Reading, Meditation...)" maxlength="50">
+                <button id="addHabitBtn" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Habit
+                </button>
+            </div>
+        </div>
+
+        <!-- Habits Container -->
+        <div class="habits-container" id="habitsContainer">
+            <!-- Habits will be dynamically added here -->
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <h2><i class="fas fa-chart-pie"></i> Your Progress</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalHabits">0</div>
+                    <div class="stat-label">Total Habits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completedToday">0</div>
+                    <div class="stat-label">Completed Today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="currentStreak">0</div>
+                    <div class="stat-label">Current Streak</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="successRate">0%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Calendar -->
+        <div class="calendar-section">
+            <h2><i class="fas fa-calendar-week"></i> This Week</h2>
+            <div class="week-days" id="weekDays">
+                <!-- Week days will be dynamically added -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this habit?</p>
+            <div class="modal-actions">
+                <button id="confirmDelete" class="btn-danger">Delete</button>
+                <button id="cancelDelete" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
